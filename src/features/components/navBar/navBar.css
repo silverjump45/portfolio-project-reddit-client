@@ -1,0 +1,50 @@
+header {
+    background-color: burlywood;
+    box-shadow: 0 .4rem .4rem;
+}
+
+.navBar {
+    text-transform: uppercase;
+    width: 50%;
+    height: 4.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navBarIcon {
+    min-height: 1.5rem;
+    min-width: 1.5rem;
+    flex-shrink: 1;
+}
+
+.navBarLeft {
+    margin-left: 4rem;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    flex-shrink: 1;
+}
+
+@media only screen and (min-width: 375px) {
+    .navBar {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .navBar {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 1372px) {
+    .navBar {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .navBarLeft {
+        margin-left: 5px;
+    }
+}
