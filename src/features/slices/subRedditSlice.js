@@ -24,7 +24,7 @@ export const subRedditSlice = createSlice({
 })
 
 export const pushSubReddit = subRedditSlice.actions
-export const slectSubReddit = (state) => state.allSubReddit
+export const selectSubReddit = (state) => state.allSubReddit
 export default subRedditSlice.reducer
 
 export const fetchSubReddit = createAsyncThunk('fetch/subReddits', async () => {

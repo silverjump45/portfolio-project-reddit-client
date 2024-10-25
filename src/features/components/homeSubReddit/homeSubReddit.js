@@ -1,6 +1,6 @@
 import '../singleSubReddit/singleSubReddit.css'
 
-const homeSubReddit = (props) => {
+const HomeSubReddit = (props) => {
     console.log(props)
 
     return (
@@ -11,4 +11,4 @@ const homeSubReddit = (props) => {
     )
 }
 
-export default homeSubReddit
+export default HomeSubReddit

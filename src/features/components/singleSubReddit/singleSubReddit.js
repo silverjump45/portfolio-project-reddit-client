@@ -2,7 +2,7 @@ import './singleSubReddit.css'
 import { useDispatch } from 'react-redux'
 import { fetchActiveRedditPost, clearPosts } from '../../slices/postsSlice/postsSlice'
 
-const singleSubReddit = (props) => {
+const SingleSubReddit = (props) => {
     const dispatch = useDispatch()
 
     const loadReddit = (e) => {
@@ -37,4 +37,4 @@ const singleSubReddit = (props) => {
     )
 }
 
-export default singleSubReddit
+export default SingleSubReddit
