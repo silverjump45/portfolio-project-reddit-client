@@ -1,6 +1,6 @@
 import './subReddit.css'
 import SingleSubReddit from '../singleSubReddit/singleSubReddit'
-import { fetchSubReddit, selectSubReddit } from '../../slices/subRedditSlice'
+import { fetchSubReddits, selectSubReddits } from '../../slices/subRedditSlice'
 import { fetchActiveRedditPost } from '../../slices/postSlice'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -9,11 +9,11 @@ const SubReddit = () => {
     const dispatch = useDispatch()
     let fetchCount = 0
     let postCount = 0
-    const { subReddit } = useSelector(selectSubReddit)
+    const { subReddit } = useSelector(selectSubReddits)
 
     useEffect(() => {
         if(fetchCount > 0) return
-        dispatch(fetchSubReddit())
+        dispatch(fetchSubReddits())
         fetchCount++
     }, [])
 

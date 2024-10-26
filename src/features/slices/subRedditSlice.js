@@ -1,8 +1,9 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import { createSlice, createAsyncThunk, current } from '@reduxjs/toolkit'
 
-export const subRedditSlice = createSlice({
-    name: 'allSubReddit',
-    intitialState: {
+
+export const subRedditsSlice = createSlice({
+    name: 'allSubReddits',
+    initialState: {
         subReddits: [{name: 'Home', img: 'self'}]
     },
     reducers: {
@@ -12,9 +13,12 @@ export const subRedditSlice = createSlice({
         },
     },
     extraReducers: (builder) => {
-        builder.addCase(fetchSubReddit.fulfilled, (state, action) => {
+        builder.addCase(fetchSubReddits.fulfilled, (state, action) => {
+            // console.log(action.payload)
             const checkAgainst = []
+            //^ Using forEach to get single push values for the subReddits state array
             action.payload.forEach(each => {
+                //^ If the subReddit is already inside the state, skip it and add the next. Total ends with top 25 subReddits
                 if(checkAgainst.some(one => one.name === each.name )) return
                 checkAgainst.push(each)
                 state.subReddits.push(each)
@@ -23,16 +27,22 @@ export const subRedditSlice = createSlice({
     }
 })
 
-export const pushSubReddit = subRedditSlice.actions
-export const selectSubReddit = (state) => state.allSubReddit
-export default subRedditSlice.reducer
+export const pushSubReddit = subRedditsSlice.actions
+export const selectSubReddits = (state) => state.allSubReddits
+export default subRedditsSlice.reducer
 
-export const fetchSubReddit = createAsyncThunk('fetch/subReddits', async () => {
-    const response = await fetch('http://www.reddit.com/r/popular.json')
+//^ This is an ASYNC Thunk that fetches the active reddit posts and puts them into an array for 
+//^     mapping into the posts section on the page
+export const fetchSubReddits = createAsyncThunk('fetch/subReddits', async () => {
+    // console.log('triggered')
+    //https://cors-anywhere.herokuapp.com/
+    const response = await fetch('https://www.reddit.com/r/popular.json')
+    // console.log(response)
     const jsonResponse = await response.json()
     const data = jsonResponse.data
     const dataList = data.children
     const names = dataList.map((reddit) => {
+        // console.log(reddit)
         return {
             name: reddit.data.subreddit,
             img: reddit.data.thumbnail

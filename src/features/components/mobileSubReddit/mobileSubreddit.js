@@ -1,11 +1,11 @@
 import '../subReddit/subReddit.css'
 import SingleSubReddit from '../../slices/subRedditSlice'
-import { selectSubReddit } from '../../slices/subRedditSlice'
+import { selectSubReddits } from '../../slices/subRedditSlice'
 import { useSelector } from 'react-redux'
 
 const MobileSubReddit = () => {
     
-    const { subReddit } = useSelector(selectSubReddit)
+    const { subReddit } = useSelector(selectSubReddits)
 
     return (
         <div className='mobile-subbreddit-container'>
