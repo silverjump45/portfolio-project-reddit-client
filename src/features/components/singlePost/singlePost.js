@@ -1,9 +1,9 @@
-import './post.css'
+import './singlePost.css'
 import { BiUpArrow, BiDownArrow } from 'react-icons/bi'
 import { TiMessage } from 'react-icons/ti'
 import { useEffect, useState } from 'react'
 
-const post = (props) => {
+const SinglePost = (props) => {
     const [time, setTime] = useState()
     let imgCheck = props.imgCheck
     if (imgCheck.includes('jpg') || imgCheck.includes('png') || imgCheck.includes('jpeg') || imgCheck.included('gif')) {
@@ -68,4 +68,4 @@ const post = (props) => {
     )
 }
 
-export default post
+export default SinglePost

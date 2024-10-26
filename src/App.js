@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import NavBar from './components/navBar/navBar';
-import Post from './components/post/post';
-import SubReddit from './components/subReddit/subReddit';
-import MobileSubReddit from './feature/components/mobileSubReddit/MobileSubReddit';
+import NavBar from './features/components/navBar/navBar';
+import Post from './features/components/singlePost/singlePost';
+import SubReddit from './features/components/subReddit/subReddit';
+import MobileSubReddit from './features/components/mobileSubReddit/mobileSubreddit';
 
 
 function App() {

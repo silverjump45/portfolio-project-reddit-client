@@ -1,7 +1,7 @@
 import './searchBar.css'
 import { BsSearch } from 'react-icons/bs'
 import { useDispatch } from 'react-redux'
-import { filterFromSearch } from '../../slices/postSlice/postSlice'
+import { filterFromSearch } from '../../slices/postSlice'
 
 const SearchBar = () => {
     const dispatch = useDispatch()

@@ -1,5 +1,5 @@
 import './navBarHamburger.css'
-import { toggleModal } from '../subReddit/SubReddit'
+import { toggleModal } from '../subReddit/subReddit'
 
 const NavBarHamburger = () => {
 

@@ -1,7 +1,7 @@
 import './subReddit.css'
 import SingleSubReddit from '../singleSubReddit/singleSubReddit'
 import { fetchSubReddit, selectSubReddit } from '../../slices/subRedditSlice'
-import { fetchActiveRedditPost } from '../../slices/postSlice/postSlice'
+import { fetchActiveRedditPost } from '../../slices/postSlice'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 

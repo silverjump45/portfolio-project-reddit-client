@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
 import subRedditReducer from '../features/slices/subRedditSlice'
-import activeRedditPostReducer from ' ../features/slices/postSlice'
+import activeRedditPostReducer from '../features/slices/postSlice'
 
 export const store = configureStore({
     reducer: {
         allSubReddit: subRedditReducer,
-        activeRedditPosts: activeRedditPostReducer
+        activeRedditPost: activeRedditPostReducer
     },
 });

@@ -38,7 +38,7 @@ export const activeRedditPostSlice = createSlice({
     }
 })
 
-export const {loadActiveRedditPost, clearPosts, filterFromSearch} = activeRedditPostsSlice.actions
+export const {loadActiveRedditPost, clearPosts, filterFromSearch} = activeRedditPostSlice.actions
 export const selectActiveRedditPost = (state) => state.activeRedditPostsSlice
 export default activeRedditPostSlice.reducer
 
