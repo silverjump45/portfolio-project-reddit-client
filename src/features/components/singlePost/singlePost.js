@@ -5,8 +5,8 @@ import { useEffect, useState } from 'react'
 
 const SinglePost = (props) => {
     const [time, setTime] = useState()
-    let imgCheck = props.imgCheck
-    if (imgCheck.includes('jpg') || imgCheck.includes('png') || imgCheck.includes('jpeg') || imgCheck.included('gif')) {
+    let imgCheck = props.img
+    if (imgCheck.includes('jpg') || imgCheck.includes('png') || imgCheck.includes('jpeg') || imgCheck.includes('gif')) {
         imgCheck = props.img
     } else {
         imgCheck = false

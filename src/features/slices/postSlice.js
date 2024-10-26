@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk, current } from '@reduxjs/toolkit'
 
 export const activeRedditPostSlice = createSlice({
     name: 'activeRedditPost',
-    intitialState: {
+    initialState: {
         posts: [],
         filterPosts: []
     },
