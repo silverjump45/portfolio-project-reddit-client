@@ -1,9 +1,10 @@
-import './subReddit.css'
-import SingleSubReddit from '../singleSubReddit/singleSubReddit'
-import { fetchSubReddits, selectSubReddits } from '../../slices/subRedditSlice'
-import { fetchActiveRedditPost } from '../../slices/postSlice'
-import { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import './subReddit.css';
+import SingleSubReddit from '../singleSubReddit/singleSubReddit';
+import fetchSubReddits from '../../slices/subRedditSlice';
+import selectSubReddits from '../../slices/subRedditSlice';
+import fetchActiveRedditPost from '../../slices/postSlice';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 const SubReddit = () => {
     const dispatch = useDispatch()

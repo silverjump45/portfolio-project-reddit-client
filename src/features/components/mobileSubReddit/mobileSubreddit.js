@@ -1,7 +1,7 @@
-import '../subReddit/subReddit.css'
-import SingleSubReddit from '../../slices/subRedditSlice'
-import { selectSubReddits } from '../../slices/subRedditSlice'
-import { useSelector } from 'react-redux'
+import '../subReddit/subReddit.css';
+import SingleSubReddit from '../../slices/subRedditSlice';
+import selectSubReddits from '../../slices/subRedditSlice';
+import { useSelector } from 'react-redux';
 
 const MobileSubReddit = () => {
     

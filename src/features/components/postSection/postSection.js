@@ -1,7 +1,7 @@
-import './postSection.css'
-import SinglePost from '../singlePost/singlePost'
-import { selectActiveRedditPost } from '../../slices/postSlice'
-import { useSelector } from 'react-redux'
+import './postSection.css';
+import SinglePost from '../singlePost/singlePost';
+import selectActiveRedditPost from '../../slices/postSlice';
+import { useSelector } from 'react-redux';
 
 const PostSection = () => {
     const { filterPosts } = useSelector(selectActiveRedditPost)

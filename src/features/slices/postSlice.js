@@ -12,13 +12,13 @@ export const activeRedditPostSlice = createSlice({
         },
         clearPosts: (state) => {
             state.posts = []
-            state.filteredPosts = []
+            state.filterPosts = []
         },
         filterFromSearch: (state, action) => {
             const data = current(state.posts)
             const userInput = action.payload.toLowerCase()
-            if(action.payload.length < 1) state.filteredPosts = data
-            state.filteredPosts = data.filter(post => {
+            if(action.payload.length < 1) state.filterPosts = data
+            state.filterPosts = data.filter(post => {
                 const postTitle = post.title.toLowerCase()
                 const postText = post.text.toLowerCase()
 
@@ -33,7 +33,7 @@ export const activeRedditPostSlice = createSlice({
     extraReducers: (builder) => {
         builder.addCase(fetchActiveRedditPost.fulfilled, (state, action) => {
             action.payload.forEach(each => state.posts.push(each))
-            action.payload.forEach(each => state.filteredPosts.push(each))
+            action.payload.forEach(each => state.filterPosts.push(each))
         })
     }
 })

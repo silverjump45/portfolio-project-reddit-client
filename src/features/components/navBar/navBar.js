@@ -1,7 +1,7 @@
-import './navBar.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import SearchBar from '../searchBar/searchBar'
-import NavBarSandwitch from '../navBarHamburger/navBarHamburger'
+import './navBar.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SearchBar from '../searchBar/searchBar';
+import NavBarSandwitch from '../navBarHamburger/navBarHamburger';
 
 const NavBar = () => {
     return (

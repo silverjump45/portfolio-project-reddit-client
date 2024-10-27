@@ -1,4 +1,4 @@
-import '../singleSubReddit/singleSubReddit.css'
+import '../singleSubReddit/singleSubReddit.css';
 
 const HomeSubReddit = (props) => {
     console.log(props)

@@ -1,6 +1,7 @@
-import './singleSubReddit.css'
-import { useDispatch } from 'react-redux'
-import { fetchActiveRedditPost, clearPosts } from '../../slices/postSlice'
+import './singleSubReddit.css';
+import { useDispatch } from 'react-redux';
+import fetchActiveRedditPost from '../../slices/postSlice';
+import clearPosts from '../../slices/postSlice';
 
 const SingleSubReddit = (props) => {
     const dispatch = useDispatch()

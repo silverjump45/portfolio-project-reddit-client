@@ -1,12 +1,12 @@
-import './singlePost.css'
-import { BiUpArrow, BiDownArrow } from 'react-icons/bi'
-import { TiMessage } from 'react-icons/ti'
-import { useEffect, useState } from 'react'
+import './singlePost.css';
+import { BiUpArrow, BiDownArrow } from 'react-icons/bi';
+import { TiMessage } from 'react-icons/ti';
+import { useEffect, useState } from 'react';
 
 const SinglePost = (props) => {
     const [time, setTime] = useState()
     let imgCheck = props.img
-    if (imgCheck.includes('jpg') || imgCheck.includes('png') || imgCheck.includes('jpeg') || imgCheck.includes('gif')) {
+    if(imgCheck?.includes('jpg') || imgCheck?.includes('png') || imgCheck?.includes('jpeg') || imgCheck?.includes('gif')) { 
         imgCheck = props.img
     } else {
         imgCheck = false
